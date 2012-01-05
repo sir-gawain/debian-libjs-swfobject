@@ -1,0 +1,24 @@
+Source: libjs-swfobject
+Section: web
+Priority: optional
+Maintainer: Christian Welzel <gawain@camlann.de>
+Build-Depends: debhelper (>= 7.0.50~), yui-compressor, mtasc
+Standards-Version: 3.9.2
+Homepage: http://code.google.com/p/swfobject/
+
+Package: libjs-swfobject
+Architecture: all
+Depends: ${misc:Depends}
+Description: tool to embed Flash content into webpages
+ SWFObject is an easy-to-use and standards-friendly method to embed Flash
+ content, which utilizes one small JavaScript file.
+ .
+  * it offers two optimized Flash Player embed methods; a markup based
+    approach and a method that relies on JavaScript
+  * it offers a JavaScript API that aims to provide a complete tool set for
+    embedding SWF files and retrieving Flash Player related information
+  * it utilizes only one small JavaScript file (10Kb / GZIPed: 3.9Kb)
+  * it is the successor of SWFObject 1.5, UFO and the Adobe Flash Player
+    Detection Kit
+  * it intends to unify all existing Flash Player embed methods and provide a
+    new standard for embedding Adobe Flash Player content 

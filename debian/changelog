@@ -1,0 +1,5 @@
+libjs-swfobject (2.2+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #601160)
+
+ -- Christian Welzel <gawain@camlann.de>  Thu, 05 Jan 2012 15:17:24 +0100

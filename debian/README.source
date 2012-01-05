@@ -1,0 +1,10 @@
+libjs-swfobject (2.2+dfsg1-1)
+
+ * Remove expressInstall.swf from source as its compiled on build.
+   expressInstall.fla remains in source package because its needed to compile
+   expressInstall.swf without mtasc. Both fla and as are the source of the swf.
+ * Remove test.swf as it has no source and no copyright information.
+ * ./swfobject.js is in the source package, because upstream ships it that way.
+   The swfobject.js in the binary package is generated from src/swfobject.js.
+
+ -- Christian Welzel <gawain@camlann.de>  Tue, 17 Jan 2011 22:00:00 +0100
