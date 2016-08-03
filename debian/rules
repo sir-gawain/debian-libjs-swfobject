@@ -18,7 +18,11 @@ clean:
 	dh_clean
 	rm -rf build
 
-build:
+build: build-arch build-indep
+
+build-arch:
+
+build-indep:
 	dh_testdir
 	mkdir build
 	mtasc -main -header 310:130:12 -version 6 -out build/expressInstall.swf -swf build/expressInstall.swf src/expressInstall.as
