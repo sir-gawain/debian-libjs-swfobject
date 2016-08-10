@@ -1,7 +1,7 @@
 Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
 Name: libjs-swfobject
 Maintainer: Christian Welzel <gawain@camlann.de>
-Source: http://code.google.com/p/swfobject/downloads/list
+Source: https://github.com/swfobject/swfobject
 
 Copyright: 2004-2012 Geoff Stearns, Bobby van der Sluis, Michael Williams,
            Aran Rhee, Philip Hutchison, Kyle Simpson and others
