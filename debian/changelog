@@ -1,3 +1,14 @@
+libjs-swfobject (2.2+dfsg-2) unstable; urgency=low
+
+  * Add Vcs-Git and Vcs-Browser fields.
+  * Split build target into build-arch and build-indep (Closes: 831935)
+  * Change Vcs-Git to secure uri.
+  * Bumped standards version to 3.9.8.
+  * Change old project URIs to clone on github. Remove watch file.
+    Adapt the get-orig-source target of debian/rules to new archive.
+
+ -- Christian Welzel <gawain@camlann.de>  Wed, 10 Aug 2016 22:47:23 +0200
+
 libjs-swfobject (2.2+dfsg-1) unstable; urgency=low
 
   * Initial release (Closes: #601160)
