@@ -1,4 +1,4 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Name: libjs-swfobject
 Maintainer: Christian Welzel <gawain@camlann.de>
 Source: http://code.google.com/p/swfobject/downloads/list
