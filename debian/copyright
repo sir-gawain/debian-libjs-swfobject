@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Name: libjs-swfobject
 Maintainer: Christian Welzel <gawain@camlann.de>
-Source: http://code.google.com/p/swfobject/downloads/list
+Source: https://github.com/swfobject/swfobject
 
 Copyright: 2004-2012 Geoff Stearns, Bobby van der Sluis, Michael Williams,
            Aran Rhee, Philip Hutchison, Kyle Simpson and others

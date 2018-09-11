@@ -1,3 +1,4 @@
-version=3
-opts="dversionmangle=s/\+dfsg//,uversionmangle=s/_/\./g" \
-  http://googlecode.debian.net/p/swfobject/swfobject_([\d_]+)\.zip
+#version=3
+
+# no watch file available, upstream does not provide versioned
+# release packages.

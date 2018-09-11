@@ -7,7 +7,7 @@ SRC_VERSION = $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\
 ORIG_VERSION = $(shell echo $(SRC_VERSION) | sed -ne 's/+dfsg//p')
 ORIGTAR = libjs-swfobject_$(ORIG_VERSION).orig.tar.gz
 ORIGDIR = swfobject
-DEBTAR = libjs-swfobject_$(SRC_VERSION).orig.tar.gz
+DEBTAR = libjs-swfobject_$(SRC_VERSION).orig.tar
 
 %:
 	dh $@
@@ -18,7 +18,11 @@ clean:
 	dh_clean
 	rm -rf build
 
-build:
+build: build-arch build-indep
+
+build-arch:
+
+build-indep:
 	dh_testdir
 	mkdir build
 	mtasc -main -header 310:130:12 -version 6 -out build/expressInstall.swf -swf build/expressInstall.swf src/expressInstall.as
@@ -27,11 +31,19 @@ build:
 	find . -maxdepth 1 -type f -print0 | xargs -0 chmod a-x
 
 get-orig-source:
-	uscan --no-conf --force-download --rename --repack --download-current-version --destdir=.
-
+# get source
+	wget https://github.com/swfobject/swfobject/archive/2.2.zip
+# unpack and rename
 	mkdir -p _unpack
-	tar -xzf $(ORIGTAR) -C _unpack
+	unzip 2.2.zip -d _unpack
+	mv _unpack/swfobject-2.2/swfobject/ _unpack/$(ORIGDIR)
+# fix line endings
+	sed -i 's/\r//g' _unpack/$(ORIGDIR)/src/expressInstall.as
+
+# remove dfsg non complient files
+	rm -r _unpack/swfobject-2.2/
 	rm -f _unpack/$(ORIGDIR)/test.swf
 	rm -f _unpack/$(ORIGDIR)/expressInstall.swf
-	tar -czf $(DEBTAR) -C _unpack $(ORIGDIR)
+# repack
+	fakeroot tar -cf - -C _unpack $(ORIGDIR) | gzip -9 - > $(DEBTAR).gz
 	rm -rf _unpack
